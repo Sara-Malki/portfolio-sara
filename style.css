@@ -1,0 +1,194 @@
+/* =========================
+   Styles généraux
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    color: #1e1e1e;
+    background-color: #fafafa;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+    z-index: 10;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #2563eb;
+}
+
+/* =========================
+   Accueil - Hero
+========================= */
+.home {
+    background: radial-gradient(circle at 30% 20%, rgba(255,200,255,0.6), transparent 60%),
+                radial-gradient(circle at 70% 80%, rgba(180,255,255,0.5), transparent 60%),
+                radial-gradient(circle at 80% 10%, rgba(255,255,180,0.5), transparent 60%),
+                #fafafa;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 4em; /* laisse de l'espace pour navbar */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #2e2e2e;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero h2 {
+    font-weight: 400;
+    color: #555;
+    margin-top: 0.5em;
+}
+
+.buttons {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.btn, .btn-secondary {
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #1e3a8a;
+}
+
+.btn-secondary {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+}
+
+.btn-secondary:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* =========================
+   Pages internes (projets & contact)
+========================= */
+.page-content {
+    padding: 8em 2em 3em; /* padding-top pour navbar */
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-content h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.project-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5em;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact links */
+.page-content a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.page-content a:hover {
+    color: #1e3a8a;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em 2em;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .project-card {
+        margin: 1em auto;
+        padding: 1.5em;
+    }
+}
