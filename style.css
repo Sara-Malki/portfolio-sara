@@ -1,222 +1,236 @@
-/* =========================
-   Styles généraux
-========================= */
+/* =============================
+   STYLE GLOBAL - SARA MALKI
+   ============================= */
+
+/* --- Configuration générale --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    color: #1e1e1e;
-    background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f9fc;
+  color: #1f2937;
+  scroll-behavior: smooth;
 }
 
-/* =========================
-   Navbar
-========================= */
+/* --- Barre de navigation --- */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 3em;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 3em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    color: #333;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #2563eb;
+  letter-spacing: 1px;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2em;
+  list-style: none;
+  display: flex;
+  gap: 2em;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-    color: #2563eb;
+  color: #2563eb;
 }
 
-/* =========================
-   Accueil - Hero
-========================= */
+/* =============================
+   PAGE D’ACCUEIL
+   ============================= */
 .home {
-    background: radial-gradient(circle at 30% 20%, rgba(255,200,255,0.6), transparent 60%),
-                radial-gradient(circle at 70% 80%, rgba(180,255,255,0.5), transparent 60%),
-                radial-gradient(circle at 80% 10%, rgba(255,255,180,0.5), transparent 60%),
-                #fafafa;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    overflow: hidden;
-    padding-top: 4em; /* laisse de l'espace pour navbar */
+  background: radial-gradient(circle at 20% 30%, rgba(173, 216, 230, 0.5), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(255, 182, 193, 0.4), transparent 60%),
+              radial-gradient(circle at 60% 20%, rgba(255, 255, 204, 0.5), transparent 60%),
+              #f7f9fc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 2em;
 }
 
 .hero h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #2e2e2e;
+  font-size: 2.8em;
+  color: #1e3a8a;
+  margin-bottom: 0.4em;
 }
 
 .hero h1 span {
-    color: #2563eb;
+  color: #2563eb;
 }
 
 .hero h2 {
-    font-weight: 400;
-    color: #555;
-    margin-top: 0.5em;
+  font-weight: 400;
+  color: #374151;
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
 }
 
 .buttons {
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
 }
 
 .btn, .btn-secondary {
-    text-decoration: none;
-    padding: 0.8em 1.5em;
-    border-radius: 25px;
-    transition: 0.3s;
-    font-weight: 500;
+  text-decoration: none;
+  padding: 0.9em 1.8em;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-weight: 600;
 }
 
 .btn {
-    background-color: #2563eb;
-    color: white;
+  background-color: #2563eb;
+  color: white;
 }
 
 .btn:hover {
-    background-color: #1e3a8a;
+  background-color: #1e3a8a;
 }
 
 .btn-secondary {
-    border: 2px solid #2563eb;
-    color: #2563eb;
+  border: 2px solid #2563eb;
+  color: #2563eb;
 }
 
 .btn-secondary:hover {
-    background-color: #2563eb;
-    color: white;
+  background-color: #2563eb;
+  color: white;
 }
 
-/* =========================
-   Pages internes (projets & contact)
-========================= */
-.page-content {
-    padding: 8em 2em 3em; /* padding-top pour navbar */
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.page-content h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-/* Project Cards */
-.project-card {
-    background: white;
-    max-width: 700px;
-    margin: 2em auto;
-    padding: 2em;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.project-card h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5em;
-}
-
-.project-card p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Contact links */
-.page-content a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.page-content a:hover {
-    color: #1e3a8a;
-}
-
-/* =========================
-   Responsive
-========================= */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 1em;
-        padding: 1em 2em;
-    }
-    .buttons {
-        flex-direction: column;
-        gap: 1em;
-    }
-    .project-card {
-        margin: 1em auto;
-        padding: 1.5em;
-    }
-   /* --- Section About Me --- */
+/* =============================
+   SECTION ABOUT ME
+   ============================= */
 .about-section {
   padding: 8em 2em 4em;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #eef4ff, #e8f0fe);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom right, #f3f8ff, #e8f0fe);
 }
 
 .about-section h1 {
+  font-size: 2em;
   color: #1e3a8a;
   margin-bottom: 1em;
 }
 
 .about-container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 850px;
   background: white;
-  padding: 2.5em;
-  border-radius: 15px;
+  padding: 3em;
+  border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   text-align: justify;
   line-height: 1.7;
   color: #333;
+  transition: transform 0.3s ease;
+}
+
+.about-container:hover {
+  transform: scale(1.02);
 }
 
 .about-container strong {
   color: #2563eb;
 }
 
+/* =============================
+   SECTION PROJETS
+   ============================= */
+.page-content {
+  padding: 8em 2em 4em;
+  text-align: center;
+  background-color: #f7f9fc;
+}
+
+.page-content h1 {
+  font-size: 2em;
+  color: #1e3a8a;
+  margin-bottom: 1em;
+}
+
+.project-card {
+  background: white;
+  max-width: 750px;
+  margin: 1.5em auto;
+  padding: 2em;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h2 {
+  color: #2563eb;
+  margin-bottom: 0.5em;
+}
+
+.project-card p {
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* =============================
+   SECTION CONTACT
+   ============================= */
+.contact-section {
+  padding: 8em 2em 4em;
+  text-align: center;
+  background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+}
+
+.contact-section h1 {
+  color: #1e3a8a;
+  margin-bottom: 1em;
+}
+
+.contact-section p a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-section p a:hover {
+  text-decoration: underline;
+}
+
+/* --- Footer (optionnel) --- */
+footer {
+  text-align: center;
+  padding: 1.2em;
+  background-color: #2563eb;
+  color: white;
 }
