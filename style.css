@@ -121,27 +121,6 @@ body {
 .btn-secondary:hover {
   background-color: #2563eb;
   color: white;
-   /* --- Photo de profil (page d'accueil) --- */
-/* --- Photo de profil dans le coin --- */
-.corner-pic {
-  position: absolute;
-  top: 90px;        /* distance du haut */
-  right: 60px;      /* position dans le coin droit */
-  width: 90px;      /* taille de l'image */
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  opacity: 0.9;
-  border: 3px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.corner-pic:hover {
-  transform: scale(1.05);
-  opacity: 1;
-}
-
 }
 
 }
