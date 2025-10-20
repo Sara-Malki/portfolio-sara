@@ -247,4 +247,46 @@ footer {
   padding: 1.2em;
   background-color: #2563eb;
   color: white;
+   /* =============================
+   PAGE SKILLS
+   ============================= */
+.skills-card {
+  background: white;
+  max-width: 850px;
+  margin: 2em auto;
+  padding: 2.5em;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  line-height: 1.7;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.skills-card h2 {
+  color: #2563eb;
+  margin-bottom: 0.5em;
+  margin-top: 1.2em;
+}
+
+.skills-card p {
+  color: #374151;
+}
+
+.edu-list, .lang-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.edu-list li, .lang-list li {
+  margin: 1em 0;
+  color: #333;
+  line-height: 1.6;
+}
+
 }
